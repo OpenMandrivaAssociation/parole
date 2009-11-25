@@ -22,12 +22,12 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 New media player for Xfce desktop environment.
 
 %package browser-plugin
+Summary:	Mozilla plugin for %{name}
 Group:		Graphical desktop/Xfce
-Summary:	Mozilla plugin for parole
-Requires:	%name = %version
+Requires:	%{name} = %{version}
 
 %description browser-plugin
-Mozilla plugin for parole.
+Mozilla plugin for %{name}.
 
 %prep
 %setup -q
