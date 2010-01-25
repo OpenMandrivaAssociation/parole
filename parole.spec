@@ -2,7 +2,7 @@
 
 Summary:	A modern media player based on the GStreamer framework
 Name:		parole
-Version:	0.2.0.1
+Version:	0.2.0.2
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
@@ -34,6 +34,7 @@ Mozilla plugin for %{name}.
 %patch0 -p0
 
 %build
+export CFLAGS="%{optflags} -fPIC"
 %configure2_5x
 %make
 
