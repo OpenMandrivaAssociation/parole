@@ -2,8 +2,8 @@
 
 Summary:	A modern media player based on the GStreamer framework
 Name:		parole
-Version:	0.2.0.2
-Release:	%mkrel 4
+Version:	0.2.0.5
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/applications/parole
@@ -14,20 +14,12 @@ BuildRequires:	libgstreamer0.10-plugins-base-devel
 BuildRequires:	libxfcegui4-devel >= 4.6.0
 BuildRequires:	libnotify-devel
 BuildRequires:	taglib-devel
-BuildRequires:	xulrunner-devel
 Obsoletes:	xfmedia
+Obsoletes:	%{name}-browser-plugin < 0.2.0.5
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 New media player for Xfce desktop environment.
-
-%package browser-plugin
-Summary:	Mozilla plugin for %{name}
-Group:		Graphical desktop/Xfce
-Requires:	%{name} = %{version}
-
-%description browser-plugin
-Mozilla plugin for %{name}.
 
 %prep
 %setup -q
@@ -70,8 +62,3 @@ rm -rf %{buildroot}
 %{_iconsdir}/hicolor/*/apps/*
 %{_datadir}/%{name}
 %{_datadir}/%{name}/pixmaps/*.png
-
-%files browser-plugin
-%defattr(-,root,root)
-%{_libdir}/mozilla/plugins/parole-player.so
-%{_libexecdir}/parole-media-plugin
