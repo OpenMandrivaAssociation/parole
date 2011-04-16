@@ -14,6 +14,7 @@ BuildRequires:	libgstreamer0.10-plugins-base-devel
 BuildRequires:	libxfcegui4-devel >= 4.6.0
 BuildRequires:	libnotify-devel
 BuildRequires:	taglib-devel
+BuildRequires:	dbus-glib-devel
 Obsoletes:	xfmedia
 Obsoletes:	%{name}-browser-plugin < 0.2.0.5
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
