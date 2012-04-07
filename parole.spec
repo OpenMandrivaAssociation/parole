@@ -3,7 +3,7 @@
 Summary:	A modern media player based on the GStreamer framework
 Name:		parole
 Version:	0.2.0.6
-Release:	%mkrel 1
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/applications/parole
@@ -17,7 +17,6 @@ BuildRequires:	taglib-devel
 BuildRequires:	dbus-glib-devel
 Obsoletes:	xfmedia
 Obsoletes:	%{name}-browser-plugin < 0.2.0.5
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 New media player for Xfce desktop environment.
@@ -32,30 +31,15 @@ export CFLAGS="%{optflags} -fPIC"
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
 # (tpg) not needed for now
 find %{buildroot} -name *.la -type f -exec rm -rf {} \;
 rm -rf %{buildroot}%{_includedir}/%{name}
 
-%find_lang %{name}
-
-%if %mdkversion < 200900
-%post
-%{update_menus}
-%endif
-
-%if %mdkversion < 200900
-%postun
-%{clean_menus}
-%endif
-
-%clean
-rm -rf %{buildroot}
+%find_lang %{name} %{name}.lang
 
 %files -f %{name}.lang
-%defattr(-,root,root)
 %doc AUTHORS ChangeLog README TODO THANKS
 %{_bindir}/%{name}
 %{_libdir}/parole-0/*.so
