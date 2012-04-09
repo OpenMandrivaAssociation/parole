@@ -27,7 +27,8 @@ New media player for Xfce desktop environment.
 
 %build
 export CFLAGS="%{optflags} -fPIC"
-%configure2_5x
+export LIBS="-lX11"
+%configure2_5x 
 %make
 
 %install
@@ -46,4 +47,3 @@ rm -rf %{buildroot}%{_includedir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_iconsdir}/hicolor/*/apps/*
 %{_datadir}/%{name}
-%{_datadir}/%{name}/pixmaps/*.png
