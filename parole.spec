@@ -32,7 +32,7 @@ Development files and headers for %{name}.
 
 %build
 %configure2_5x \
-	--enable-static
+	--disable-static
 
 %make
 
