@@ -2,7 +2,7 @@
 
 Summary:	A modern media player based on the GStreamer framework
 Name:		parole
-Version:	0.5.0
+Version:	0.5.1
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
