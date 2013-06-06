@@ -8,12 +8,12 @@ License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/applications/parole
 Source0:	http://archive.xfce.org/src/apps/parole/%{url_ver}/%{name}-%{version}.tar.bz2
-BuildRequires:	gstreamer0.10-devel
-BuildRequires:	libgstreamer0.10-plugins-base-devel
-BuildRequires:	libxfce4ui-devel >= 4.9.0
-BuildRequires:	libnotify-devel
-BuildRequires:	taglib-devel
-BuildRequires:	dbus-glib-devel
+BuildRequires:	pkgconfig(gstreamer-0.10)
+BuildRequires:	pkgconfig(gstreamer-plugins-base-0.10)
+BuildRequires:	pkgconfig(libxfce4ui-1) >= 4.9.0
+BuildRequires:	pkgconfig(libnotify)
+BuildRequires:	pkgconfig(taglib)
+BuildRequires:	pkgconfig(dbus-glib-1)
 
 %description
 New media player for Xfce desktop environment.
