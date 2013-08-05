@@ -19,7 +19,8 @@ Requires:	gstreamer1.0-plugins-good
 Requires:	gstreamer1.0-plugins-bad
 Requires:	gstreamer1.0-plugins-ugly
 Requires:	gstreamer1.0-ffmpeg
-Requires:	gstreamer1.0-a52dec
+# (tpg) is missing ?
+#Requires:	gstreamer1.0-a52dec
 
 %description
 New media player for Xfce desktop environment.
