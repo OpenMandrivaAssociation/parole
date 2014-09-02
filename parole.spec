@@ -2,24 +2,24 @@
 
 Summary:	A modern media player based on the GStreamer framework
 Name:		parole
-Version:	0.5.2
+Version:	0.7.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/applications/parole
 Source0:	http://archive.xfce.org/src/apps/parole/%{url_ver}/%{name}-%{version}.tar.bz2
-BuildRequires:	pkgconfig(gstreamer-0.10)
-BuildRequires:	pkgconfig(gstreamer-video-0.10)
-BuildRequires:	pkgconfig(libxfce4ui-1) >= 4.9.0
+BuildRequires:	pkgconfig(gstreamer-1.0)
+#BuildRequires:	pkgconfig(gstreamer-video-0.10)
+BuildRequires:	pkgconfig(libxfce4ui-1) >= 4.11
 BuildRequires:	pkgconfig(libnotify)
 BuildRequires:	pkgconfig(taglib)
 BuildRequires:	pkgconfig(dbus-glib-1)
-Requires:	gstreamer0.10-plugins-base
-Requires:	gstreamer0.10-plugins-good
-Requires:	gstreamer0.10-plugins-bad
-Requires:	gstreamer0.10-plugins-ugly
-Requires:	gstreamer0.10-ffmpeg
-Requires:	gstreamer0.10-a52dec
+#Requires:	gstreamer0.10-plugins-base
+#Requires:	gstreamer0.10-plugins-good
+#Requires:	gstreamer0.10-plugins-bad
+#Requires:	gstreamer0.10-plugins-ugly
+#Requires:	gstreamer0.10-ffmpeg
+#Requires:	gstreamer0.10-a52dec
 
 %description
 New media player for Xfce desktop environment.
@@ -37,7 +37,7 @@ Development files and headers for %{name}.
 %build
 %configure2_5x \
 	--disable-static \
-    --with-gstreamer=0.10
+	--with-gstreamer=1.0
 
 %make
 
