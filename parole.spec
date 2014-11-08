@@ -9,7 +9,7 @@ Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/applications/parole
 Source0:	http://archive.xfce.org/src/apps/parole/%{url_ver}/%{name}-%{version}.tar.bz2
 BuildRequires:	pkgconfig(gstreamer-1.0)
-#BuildRequires:	pkgconfig(gstreamer-video-0.10)
+BuildRequires:	pkgconfig(gstreamer-video-1.0)
 BuildRequires:	pkgconfig(libxfce4ui-1) >= 4.11
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(libnotify)
