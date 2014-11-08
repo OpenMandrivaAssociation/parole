@@ -11,6 +11,7 @@ Source0:	http://archive.xfce.org/src/apps/parole/%{url_ver}/%{name}-%{version}.t
 BuildRequires:	pkgconfig(gstreamer-1.0)
 #BuildRequires:	pkgconfig(gstreamer-video-0.10)
 BuildRequires:	pkgconfig(libxfce4ui-1) >= 4.11
+BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(libnotify)
 BuildRequires:	pkgconfig(taglib)
 BuildRequires:	pkgconfig(dbus-glib-1)
