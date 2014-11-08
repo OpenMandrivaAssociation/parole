@@ -35,7 +35,9 @@ Development files and headers for %{name}.
 %setup -q
 
 %build
-%configure2_5x \
+sed -i -e 's/libxfce4ui-2/libxfce4ui-1/g' configure*
+
+%configure \
 	--disable-static \
 	--with-gstreamer=1.0
 
