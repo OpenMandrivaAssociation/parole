@@ -38,6 +38,9 @@ Development files and headers for %{name}.
 
 %build
 sed -i -e 's/libxfce4ui-2/libxfce4ui-1/g' configure*
+aclocal
+autoreconf -fiv
+automake
 
 %configure \
 	--disable-static \
