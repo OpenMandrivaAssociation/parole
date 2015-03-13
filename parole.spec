@@ -15,6 +15,7 @@ BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(libnotify)
 BuildRequires:	pkgconfig(taglib)
 BuildRequires:	pkgconfig(dbus-glib-1)
+BuildRequires:	automake1.4
 #Requires:	gstreamer0.10-plugins-base
 #Requires:	gstreamer0.10-plugins-good
 #Requires:	gstreamer0.10-plugins-bad
