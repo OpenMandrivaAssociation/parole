@@ -2,12 +2,12 @@
 
 Summary:	A modern media player based on the GStreamer framework
 Name:		parole
-Version:	0.8.0
+Version:	0.6.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/applications/parole
-Source0:	http://archive.xfce.org/src/apps/parole/%{url_ver}/%{name}-%{version}.tar.bz2
+Source0:	http://archive.xfce.org/src/apps/parole/0.6/%{name}-%{version}.tar.bz2
 BuildRequires:	pkgconfig(gstreamer-1.0)
 BuildRequires:	pkgconfig(gstreamer-video-1.0)
 BuildRequires:	pkgconfig(libxfce4ui-1) >= 4.12

@@ -1,3 +1,4 @@
----
-sources:
+removed_sources:
   parole-0.8.0.tar.bz2: 2f694a088d7b5085c6e849de03c4426e97bbd317
+sources:
+  parole-0.6.0.tar.bz2: 761001c529152c0c463a3827fa3bd8e04ca52a87
