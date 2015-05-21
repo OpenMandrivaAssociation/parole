@@ -1,4 +1,5 @@
 %define url_ver %(echo %{version} | cut -c 1-3)
+%define _disable_ld_no_undefined 1
 
 Summary:	A modern media player based on the GStreamer framework
 Name:		parole
@@ -10,12 +11,11 @@ URL:		http://goodies.xfce.org/projects/applications/parole
 Source0:	http://archive.xfce.org/src/apps/parole/%{url_ver}/%{name}-%{version}.tar.bz2
 BuildRequires:	pkgconfig(gstreamer-1.0)
 BuildRequires:	pkgconfig(gstreamer-video-1.0)
-BuildRequires:	pkgconfig(libxfce4ui-1) >= 4.12
+BuildRequires:	pkgconfig(libxfce4ui-2) >= 4.12
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(libnotify)
 BuildRequires:	pkgconfig(taglib)
 BuildRequires:	pkgconfig(dbus-glib-1)
-BuildRequires:	automake1.4
 Requires:	gstreamer1.0-plugins-base
 Requires:	gstreamer1.0-plugins-good
 Requires:	gstreamer1.0-plugins-bad
@@ -37,11 +37,6 @@ Development files and headers for %{name}.
 %setup -q
 
 %build
-sed -i -e 's/libxfce4ui-2/libxfce4ui-1/g' configure*
-aclocal
-autoreconf -fiv
-automake
-
 %configure2_5x \
 	--disable-static \
 	--with-gstreamer=1.0
@@ -60,6 +55,7 @@ automake
 %{_datadir}/applications/%{name}.desktop
 %{_iconsdir}/hicolor/*/apps/*
 %{_datadir}/%{name}
+%{_datadir}/appdata/parole.appdata.xml
 
 %files %{name}-devel
 %dir %{_includedir}/%{name}
