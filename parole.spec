@@ -1,9 +1,10 @@
-%define url_ver %(echo %{version} | cut -c 1-3)
+%define url_ver %(echo %{version} | cut -d. -f 1,2)
 %define _disable_ld_no_undefined 1
+%define _disable_rebuild_configure 1
 
 Summary:	A modern media player based on the GStreamer framework
 Name:		parole
-Version:	0.8.0
+Version:	1.0.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
@@ -52,7 +53,7 @@ Development files and headers for %{name}.
 %doc AUTHORS ChangeLog README TODO THANKS
 %{_bindir}/%{name}
 %{_libdir}/parole-0/*.so
-%{_datadir}/applications/%{name}.desktop
+%{_datadir}/applications/org.xfce.Parole.desktop
 %{_iconsdir}/hicolor/*/apps/*
 %{_datadir}/%{name}
 %{_datadir}/appdata/parole.appdata.xml
