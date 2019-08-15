@@ -56,7 +56,7 @@ Development files and headers for %{name}.
 %{_datadir}/applications/org.xfce.Parole.desktop
 %{_iconsdir}/hicolor/*/apps/*
 %{_datadir}/%{name}
-%{_datadir}/appdata/parole.appdata.xml
+%{_datadir}/metainfo/parole.appdata.xml
 
 %files %{name}-devel
 %dir %{_includedir}/%{name}
