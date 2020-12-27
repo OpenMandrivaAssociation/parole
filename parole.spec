@@ -4,7 +4,7 @@
 
 Summary:	A modern media player based on the GStreamer framework
 Name:		parole
-Version:	1.0.5
+Version:	4.15.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
@@ -50,7 +50,7 @@ Development files and headers for %{name}.
 %find_lang %{name}
 
 %files -f %{name}.lang
-%doc AUTHORS ChangeLog README TODO THANKS
+%doc AUTHORS ChangeLog TODO THANKS
 %{_bindir}/%{name}
 %{_libdir}/parole-0/*.so
 %{_datadir}/applications/org.xfce.Parole.desktop
