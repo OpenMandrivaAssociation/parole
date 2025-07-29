@@ -10,6 +10,8 @@ License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		https://goodies.xfce.org/projects/applications/parole
 Source0:	https://archive.xfce.org/src/apps/parole/%{url_ver}/%{name}-%{version}.tar.bz2
+
+BuildRequires:	meson
 BuildRequires:	pkgconfig(gstreamer-1.0)
 BuildRequires:	pkgconfig(gstreamer-video-1.0)
 BuildRequires:	pkgconfig(libxfce4ui-2) >= 4.12
@@ -38,14 +40,14 @@ Development files and headers for %{name}.
 %autosetup -p1
 
 %build
-%configure \
-	--disable-static \
-	--with-gstreamer=1.0
+%meson \
+	-Dx11=enabled \
+ 	-Dwayland=enabled
 
-%make_build
+%meson_build
 
 %install
-%make_install
+%meson_install
 
 %find_lang %{name}
 
